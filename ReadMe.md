@@ -1,6 +1,6 @@
 **App Name:** Post
 
-**Tagline:** "The Messanging platform built for humans, not for profit."
+**Tagline:** "The Messaging platform built for humans, not for profit."
 
 
 
