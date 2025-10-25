@@ -20,14 +20,20 @@ export class AllExceptionsFilter implements ExceptionFilter {
 
         // Optional: format message if it's an object
         if (typeof message === 'object' && (message as any).message) {
-            message = (message as any).message[0];
+            message = (message as any).message;
+        }
+
+        // if message is array then use only first index
+        if (Array.isArray(message)) {
+            message = message[0];
         }
 
         response.status(status).json({
             statusCode: status,
             timestamp: new Date().toISOString(),
             path: request.url,
-            message,
+            // errors:message,
+            message
         });
     }
 }
