@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AuthController } from './auth.controller';
+import { PasswordService } from './password.service';
 
 /**
  * AuthModule is responsible for managing authentication-related operations.
@@ -7,8 +8,7 @@ import { AuthController } from './auth.controller';
  */
 @Module({
     imports: [],        
-    providers: [],
+    providers: [PasswordService],
     controllers: [AuthController],
-    exports: [],
 })
 export class AuthModule { }

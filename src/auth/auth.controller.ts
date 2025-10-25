@@ -37,10 +37,15 @@ export class AuthController {
                 salt
             }
         });
-        const { password, ...rest } = register;
+
         return {
             message: "Register Successfully",
-            data: rest
+            data: {
+                id: register.id,
+                firstname: register.firstname,
+                lastname: register.lastname,
+                email: register.email
+            }
         }
     }
 }
